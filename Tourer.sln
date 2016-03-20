@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourer.Model", "Tourer.Model\Tourer.Model.csproj", "{F1D3D11A-99DA-4873-9ABD-8E71CBFFDBBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourer.Model.Tests", "Tourer.Model.Tests\Tourer.Model.Tests.csproj", "{6ECC635E-BEF5-4F53-9859-8F92F35D10E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourer.Main", "Tourer.Main\Tourer.Main.csproj", "{B6AB31DF-D2AE-4CFD-8B5F-69EA7A56CE23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourer.Main.Tests", "Tourer.Main.Tests\Tourer.Main.Tests.csproj", "{60564205-3D51-4C11-8B1C-C2EF7F5E5F8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourer.DataAccess", "Tourer.DataAccess\Tourer.DataAccess.csproj", "{F338CFDE-A23F-47DF-A20F-24384BC3E523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourer.DataAccess.Tests", "Tourer.DataAccess.Tests\Tourer.DataAccess.Tests.csproj", "{1F5083D6-4E17-49A0-A5B5-AA6A8ACD62F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1D3D11A-99DA-4873-9ABD-8E71CBFFDBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D3D11A-99DA-4873-9ABD-8E71CBFFDBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D3D11A-99DA-4873-9ABD-8E71CBFFDBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D3D11A-99DA-4873-9ABD-8E71CBFFDBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECC635E-BEF5-4F53-9859-8F92F35D10E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECC635E-BEF5-4F53-9859-8F92F35D10E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECC635E-BEF5-4F53-9859-8F92F35D10E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECC635E-BEF5-4F53-9859-8F92F35D10E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AB31DF-D2AE-4CFD-8B5F-69EA7A56CE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AB31DF-D2AE-4CFD-8B5F-69EA7A56CE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AB31DF-D2AE-4CFD-8B5F-69EA7A56CE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AB31DF-D2AE-4CFD-8B5F-69EA7A56CE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60564205-3D51-4C11-8B1C-C2EF7F5E5F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60564205-3D51-4C11-8B1C-C2EF7F5E5F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60564205-3D51-4C11-8B1C-C2EF7F5E5F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60564205-3D51-4C11-8B1C-C2EF7F5E5F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F338CFDE-A23F-47DF-A20F-24384BC3E523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F338CFDE-A23F-47DF-A20F-24384BC3E523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F338CFDE-A23F-47DF-A20F-24384BC3E523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F338CFDE-A23F-47DF-A20F-24384BC3E523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5083D6-4E17-49A0-A5B5-AA6A8ACD62F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5083D6-4E17-49A0-A5B5-AA6A8ACD62F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5083D6-4E17-49A0-A5B5-AA6A8ACD62F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5083D6-4E17-49A0-A5B5-AA6A8ACD62F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
