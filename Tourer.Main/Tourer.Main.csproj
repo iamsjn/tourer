@@ -130,7 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -165,10 +164,25 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\User\UserController.cs" />
+    <Compile Include="Controllers\User\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Enum.cs" />
+    <Compile Include="Helpers\ResponseStatus.cs" />
+    <Compile Include="Migrations\201603201939459_InitialCreate.cs" />
+    <Compile Include="Migrations\201603201939459_InitialCreate.Designer.cs">
+      <DependentUpon>201603201939459_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603221618520_AddGCM.cs" />
+    <Compile Include="Migrations\201603221618520_AddGCM.Designer.cs">
+      <DependentUpon>201603221618520_AddGCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603221625093_UpdateUser.cs" />
+    <Compile Include="Migrations\201603221625093_UpdateUser.Designer.cs">
+      <DependentUpon>201603221625093_UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +253,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603201939459_InitialCreate.resx">
+      <DependentUpon>201603201939459_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603221618520_AddGCM.resx">
+      <DependentUpon>201603221618520_AddGCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603221625093_UpdateUser.resx">
+      <DependentUpon>201603221625093_UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

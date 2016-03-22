@@ -14,5 +14,6 @@ namespace Tourer.Model
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<GCM> GCMs { get; set; }
     }
 }

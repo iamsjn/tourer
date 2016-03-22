@@ -9,13 +9,28 @@ namespace Tourer.Model
     public class User
     {
         public int UserID { get; set; }
-        [Required][EmailAddress]
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
         [Required]
+        [MaxLength(500)]
+        [MinLength(2)]
         public string FirstName { get; set; }
         [Required]
+        [MaxLength(500)]
+        [MinLength(2)]
         public string LastName { get; set; }
         [Required]
+        [MinLength(5)]
         public string Password { get; set; }
+        [Required]
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+
+        public ICollection<GCM> GCMs { get; set; }
     }
 }
+
+
+//enable-migrations -ContextProjectName Tourer.Model -StartUpProjectName Tourer.Model
+//-ContextTypeName Tourer.Model.TourerContext -ProjectName Tourer.Main
