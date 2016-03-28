@@ -2,9 +2,48 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
 <body>
     <h1>Happy Tour.......!!!</h1>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="product" />
+    </div>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON('api/home/seasonal')
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+                    });
+                });
+        });
+
+        function find() {
+            var oUser =
+            {
+                "Email": "ahah@fhfh.com", "FirstName": "dffd", "LastName": "fgfgg", "Password": "fgrfg"
+            }
+            var oGCM =
+            {
+                "GCMNo": "ertytryty56y655hgnhgngh"
+            }
+            var info = "hdfhdhfhdgfhgdhfgdhgfdhfgdhfdfdhgg";
+            $.post('api/default/signup', { "User": oUser, "GCM": oGCM })
+                .done(function (data) {
+                    console.log(data);
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    console.log(err);
+                });
+        }
+    </script>
 </body>
 </html>

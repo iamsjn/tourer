@@ -86,7 +86,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GCM\GCMActivity.cs" />
+    <Compile Include="GCM\GCMDA.cs" />
+    <Compile Include="Helpers\Enum.cs" />
+    <Compile Include="Helpers\CommonHelper.cs" />
+    <Compile Include="Location\LocationActivity.cs" />
+    <Compile Include="Location\LocationDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TADetail\TADetailActivity.cs" />
+    <Compile Include="TADetail\TADetailDA.cs" />
+    <Compile Include="TAttractionSeasonInfo\TAttractionSeasonInfoActivity.cs" />
+    <Compile Include="TAttractionSeasonInfo\TAttractionSeasonInfoDA.cs" />
+    <Compile Include="TouristAttraction\TouristAttractionActivity.cs" />
+    <Compile Include="TouristAttraction\TouristAttractionDA.cs" />
+    <Compile Include="User\UserActivity.cs" />
+    <Compile Include="User\UserDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tourer.Model.Tests\Tourer.Model.Tests.csproj">
@@ -98,6 +112,7 @@
       <Name>Tourer.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

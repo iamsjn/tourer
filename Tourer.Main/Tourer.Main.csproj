@@ -164,12 +164,10 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\User\DefaultController.cs" />
+    <Compile Include="Controllers\Default\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Enum.cs" />
-    <Compile Include="Helpers\ResponseStatus.cs" />
     <Compile Include="Migrations\201603201939459_InitialCreate.cs" />
     <Compile Include="Migrations\201603201939459_InitialCreate.Designer.cs">
       <DependentUpon>201603201939459_InitialCreate.cs</DependentUpon>
@@ -182,15 +180,24 @@
     <Compile Include="Migrations\201603221625093_UpdateUser.Designer.cs">
       <DependentUpon>201603221625093_UpdateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603261015306_AddTouristAttrationAndOthersRelated.cs" />
+    <Compile Include="Migrations\201603261015306_AddTouristAttrationAndOthersRelated.Designer.cs">
+      <DependentUpon>201603261015306_AddTouristAttrationAndOthersRelated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603271823047_Update-TADetailRelation.cs" />
+    <Compile Include="Migrations\201603271823047_Update-TADetailRelation.Designer.cs">
+      <DependentUpon>201603271823047_Update-TADetailRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603271905024_Drop-Season.cs" />
+    <Compile Include="Migrations\201603271905024_Drop-Season.Designer.cs">
+      <DependentUpon>201603271905024_Drop-Season.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -229,7 +236,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -237,6 +243,14 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tourer.DataAccess.Tests\Tourer.DataAccess.Tests.csproj">
+      <Project>{1f5083d6-4e17-49a0-a5b5-aa6a8acd62f1}</Project>
+      <Name>Tourer.DataAccess.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tourer.DataAccess\Tourer.DataAccess.csproj">
+      <Project>{f338cfde-a23f-47df-a20f-24384bc3e523}</Project>
+      <Name>Tourer.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tourer.Model.Tests\Tourer.Model.Tests.csproj">
       <Project>{6ecc635e-bef5-4f53-9859-8f92f35d10e0}</Project>
       <Name>Tourer.Model.Tests</Name>
@@ -247,9 +261,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -263,6 +274,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603221625093_UpdateUser.resx">
       <DependentUpon>201603221625093_UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603261015306_AddTouristAttrationAndOthersRelated.resx">
+      <DependentUpon>201603261015306_AddTouristAttrationAndOthersRelated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603271823047_Update-TADetailRelation.resx">
+      <DependentUpon>201603271823047_Update-TADetailRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603271905024_Drop-Season.resx">
+      <DependentUpon>201603271905024_Drop-Season.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

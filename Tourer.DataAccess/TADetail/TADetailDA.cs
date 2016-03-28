@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Tourer.Model;
 
-namespace Tourer.Main
+namespace Tourer.DataAccess
 {
-    public class EnumHelper
+    public class TADetailDA
     {
-
     }
 }

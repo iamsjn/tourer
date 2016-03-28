@@ -16,8 +16,20 @@ namespace Tourer.Main
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/home/seasonal",
+                defaults: new { controller = "Default", action = "GetSeasonalTouristAttraction" }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "SignUp",
+                routeTemplate: "api/default/signup",
+                defaults: new { controller = "Default", action = "SignUp" }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "SignIn",
+                routeTemplate: "api/default/signin",
+                defaults: new { controller = "Default", action = "SignIn" }
             );
         }
     }

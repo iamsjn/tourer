@@ -12,8 +12,11 @@ namespace Tourer.Model
         {
             this.Database.CreateIfNotExists();
         }
-
         public DbSet<User> Users { get; set; }
         public DbSet<GCM> GCMs { get; set; }
+        public DbSet<TouristAttraction> TouristAttractions { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<TAttractionSeasonInfo> TAttractionSeasonInfos { get; set; }
+        public DbSet<TADetail> TADetails { get; set; }
     }
 }
