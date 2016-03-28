@@ -30,15 +30,43 @@ namespace Tourer.Main.Migrations
             //    );
             //
 
-            //var seasons = new List<Season>
-            //{
-            //new Season{Name="Winter", CreatedDate=DateTime.Parse("2016/03/28") },
-            //new Season{Name="Summer", CreatedDate=DateTime.Parse("2016/03/28")},
-            //new Season{Name="Rainy", CreatedDate=DateTime.Parse("2016/03/28")}
-            //};
+            var locations = new List<Location>
+            {
+            new Location{LocationID=1, Name="Dhaka", Latitude="45'0", Longitude="46'67", CreatedDate=DateTime.Parse("2016/03/28") },
+            };
 
-            //seasons.ForEach(s => context.Seasons.Add(s));
-            //context.SaveChanges();
+            locations.ForEach(s => context.Locations.Add(s));
+            context.SaveChanges();
+
+            var touristAttractions = new List<TouristAttraction>
+            {
+            new TouristAttraction{LocationID=1, Name="Ahsan Manzil", CreatedDate=DateTime.Parse("2016/03/28") },
+            new TouristAttraction{LocationID=1, Name="Lalbag Fort", CreatedDate=DateTime.Parse("2016/03/28")},
+            new TouristAttraction{LocationID=1, Name="Nabab Villa", CreatedDate=DateTime.Parse("2016/03/28")}
+            };
+
+            touristAttractions.ForEach(s => context.TouristAttractions.Add(s));
+            context.SaveChanges();
+
+            var tADetails = new List<TADetail>
+            {
+            new TADetail{TouristAttractionID=1, Detail="Ahsan Manzil is a nice place for making a tour.", CreatedDate=DateTime.Parse("2016/03/28") },
+            new TADetail{TouristAttractionID=2, Detail="Lalbag Fort is a nice place for making a tour.", CreatedDate=DateTime.Parse("2016/03/28")},
+            new TADetail{TouristAttractionID=3, Detail="Nabab Villa is a nice place for making a tour.", CreatedDate=DateTime.Parse("2016/03/28")}
+            };
+
+            tADetails.ForEach(s => context.TADetails.Add(s));
+            context.SaveChanges();
+
+            var tAttractionSeasonInfos = new List<TAttractionSeasonInfo>
+            {
+            new TAttractionSeasonInfo{TouristAttractionID=1, Season=3, CreatedDate=DateTime.Parse("2016/03/28") },
+            new TAttractionSeasonInfo{TouristAttractionID=2, Season=3, CreatedDate=DateTime.Parse("2016/03/28")},
+            new TAttractionSeasonInfo{TouristAttractionID=3, Season=3, CreatedDate=DateTime.Parse("2016/03/28")}
+            };
+
+            tAttractionSeasonInfos.ForEach(s => context.TAttractionSeasonInfos.Add(s));
+            context.SaveChanges();
         }
     }
 }

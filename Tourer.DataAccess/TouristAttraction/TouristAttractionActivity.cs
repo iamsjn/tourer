@@ -9,12 +9,19 @@ namespace Tourer.DataAccess
     public class TouristAttractionActivity
     {
         TouristAttractionDA _oTouristAttractionDA = null;
-        ICollection<TouristAttraction> touristAttractions = null;
+        ICollection<dynamic> touristAttractions = null;
         public TouristAttractionActivity() { _oTouristAttractionDA = new TouristAttractionDA(); }
-        public IEnumerable<TouristAttraction> GetTouristAttractions(ICollection<int> IDs)
+        public IEnumerable<dynamic> GetTouristAttractions(ICollection<int> IDs)
         {
-            touristAttractions = new List<TouristAttraction>();
+            touristAttractions = new List<dynamic>();
             touristAttractions = _oTouristAttractionDA.GetTouristAttractions(IDs);
+            return touristAttractions;
+        }
+
+        public IEnumerable<dynamic> GetTouristAttractions()
+        {
+            touristAttractions = new List<dynamic>();
+            touristAttractions = _oTouristAttractionDA.GetTouristAttractions();
             return touristAttractions;
         }
     }

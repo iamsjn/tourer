@@ -13,6 +13,9 @@ namespace Tourer.Model
         public string Name { get; set; }
         public string Longitude { get; set; }
         public string Latitude { get; set; }
+        [Required]
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
 
         public IEnumerable<TouristAttraction> TouristAttraction { get; set; }
     }

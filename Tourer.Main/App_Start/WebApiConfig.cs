@@ -15,9 +15,15 @@ namespace Tourer.Main
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
+                name: "GetSeasonalTouristAttraction",
                 routeTemplate: "api/home/seasonal",
                 defaults: new { controller = "Default", action = "GetSeasonalTouristAttraction" }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "GetLocationalTouristAttraction",
+                routeTemplate: "api/home/locational",
+                defaults: new { controller = "Default", action = "GetLocationalTouristAttraction" }
             );
 
             config.Routes.MapHttpRoute(

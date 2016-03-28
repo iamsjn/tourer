@@ -14,8 +14,16 @@ namespace Tourer.DataAccess
         public ICollection<int> GetTAIDs(EnumSeason enumSeason)
         {
             _touristAttractionIDs = new List<int>();
-            _touristAttractionIDs = _oTourerContext.TAttractionSeasonInfos.Where(t => t.Season == Convert.ToInt32(enumSeason)).Select(i=>i.TouristAttractionID).Take(CommonHelper.GenerateRandomNumber(2, 8)).ToList();
-            return _touristAttractionIDs;
+            try
+            {
+                _touristAttractionIDs = _oTourerContext.TAttractionSeasonInfos.Where(t => t.Season == (int)enumSeason).Select(i => i.TouristAttractionID).Take(CommonHelper.GenerateRandomNumber(2, 8)).ToList();
+                return _touristAttractionIDs;
+            }
+            catch (Exception)
+            {
+                _touristAttractionIDs = null;
+                return _touristAttractionIDs;
+            }
         }
     }
 }

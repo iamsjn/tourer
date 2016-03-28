@@ -192,6 +192,10 @@
     <Compile Include="Migrations\201603271905024_Drop-Season.Designer.cs">
       <DependentUpon>201603271905024_Drop-Season.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603281415565_Update-CreatedColumn.cs" />
+    <Compile Include="Migrations\201603281415565_Update-CreatedColumn.Designer.cs">
+      <DependentUpon>201603281415565_Update-CreatedColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603271905024_Drop-Season.resx">
       <DependentUpon>201603271905024_Drop-Season.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603281415565_Update-CreatedColumn.resx">
+      <DependentUpon>201603281415565_Update-CreatedColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
