@@ -7,14 +7,21 @@ namespace Tourer.DataAccess
 {
     public class LocationActivity
     {
-        LocationDA _oLocationDA = null;
+        LocationDA _locationDA = null;
         ICollection<int> _locationIDs = null;
-        public LocationActivity() { _oLocationDA = new LocationDA(); }
+        ICollection<dynamic> _touristAttractions = null;
+        public LocationActivity() { _locationDA = new LocationDA(); }
         public ICollection<int> GetLocationIDs()
         {
             _locationIDs = new List<int>();
-            _locationIDs = _oLocationDA.GetLocationIDs();
+            _locationIDs = _locationDA.GetLocationIDs();
             return _locationIDs;
+        }
+        public IEnumerable<dynamic> GetSearchResults(string searchKeyword)
+        {
+            _touristAttractions = new List<dynamic>();
+            _touristAttractions = _locationDA.GetSearchResults(searchKeyword);
+            return _touristAttractions;
         }
     }
 }

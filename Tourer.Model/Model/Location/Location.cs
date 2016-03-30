@@ -17,6 +17,6 @@ namespace Tourer.Model
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
 
-        public IEnumerable<TouristAttraction> TouristAttraction { get; set; }
+        //public IEnumerable<TouristAttraction> TouristAttraction { get; set; }
     }
 }

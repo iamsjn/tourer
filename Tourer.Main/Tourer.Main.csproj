@@ -165,6 +165,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Default\DefaultController.cs" />
+    <Compile Include="Controllers\Search\SearchController.cs" />
+    <Compile Include="Controllers\Suggestion\SuggestionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,6 +197,14 @@
     <Compile Include="Migrations\201603281415565_Update-CreatedColumn.cs" />
     <Compile Include="Migrations\201603281415565_Update-CreatedColumn.Designer.cs">
       <DependentUpon>201603281415565_Update-CreatedColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603301548392_Update-TADetail.cs" />
+    <Compile Include="Migrations\201603301548392_Update-TADetail.Designer.cs">
+      <DependentUpon>201603301548392_Update-TADetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603301602509_Update-TableRelation.cs" />
+    <Compile Include="Migrations\201603301602509_Update-TableRelation.Designer.cs">
+      <DependentUpon>201603301602509_Update-TableRelation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -290,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603281415565_Update-CreatedColumn.resx">
       <DependentUpon>201603281415565_Update-CreatedColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603301548392_Update-TADetail.resx">
+      <DependentUpon>201603301548392_Update-TADetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603301602509_Update-TableRelation.resx">
+      <DependentUpon>201603301602509_Update-TableRelation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

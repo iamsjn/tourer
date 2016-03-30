@@ -28,8 +28,14 @@ namespace Tourer.Main
 
             config.Routes.MapHttpRoute(
                 name: "GetTouristAttractionSuggestion",
-                routeTemplate: "api/default/suggestion",
-                defaults: new { controller = "Default", action = "GetTouristAttractionSuggestion"}
+                routeTemplate: "api/suggestion/suggestions/{locationID}",
+                defaults: new { controller = "Suggestion", action = "GetTouristAttractionSuggestion", locationID = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "SearchTouristAttraction",
+                routeTemplate: "api/search/searchta/{searchKeyword}",
+                defaults: new { controller = "Search", action = "SearchTouristAttraction", searchKeyword = RouteParameter.Optional }
             );
 
             config.Routes.MapHttpRoute(

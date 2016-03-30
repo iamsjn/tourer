@@ -24,7 +24,7 @@ namespace Tourer.Model
         public DateTime? ModifiedDate { get; set; }
 
         public IEnumerable<TAttractionSeasonInfo> TAttractionSeasonInfo { get; set; }
-        public virtual Location Location { get; set; }
-        public virtual TADetail TADetail { get; set; }
+        //public virtual Location Location { get; set; }
+        //public virtual TADetail TADetail { get; set; }
     }
 }

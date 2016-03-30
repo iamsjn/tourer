@@ -14,14 +14,15 @@
     </div>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
-        //$(document).ready(function () {
-        //    // Send an AJAX request
-        //    $.getJSON('api/home/locational')
-        //        .done(function (data) {
-        //            // On success, 'data' contains a list of products.
-        //            console.log(JSON.stringify(data));
-        //        });
-        //});
+        $(document).ready(function () {
+            // send an ajax request
+            keyword = 'manzil';
+            $.post('api/search/searchta/' + keyword)
+                .done(function (data) {
+                    // on success, 'data' contains a list of products.
+                    console.log(JSON.stringify(data));
+                });
+        });
 
         function find() {
             var oUser =
@@ -33,7 +34,8 @@
                 "GCMNo": "ertytryty56y655hgnhgngh"
             }
             var info = "hdfhdhfhdgfhgdhfgdhgfdhfgdhfdfdhgg";
-            $.post('api/default/suggestion')
+            var id = 1;
+            $.post('api/suggestion/suggestions/' + id)
                 .done(function (data) {
                     console.log(data);
                 })

@@ -8,26 +8,33 @@ namespace Tourer.DataAccess
 {
     public class TouristAttractionActivity
     {
-        TouristAttractionDA _oTouristAttractionDA = null;
-        ICollection<dynamic> touristAttractions = null;
-        public TouristAttractionActivity() { _oTouristAttractionDA = new TouristAttractionDA(); }
+        TouristAttractionDA _touristAttractionDA = null;
+        ICollection<dynamic> _touristAttractions = null;
+        public TouristAttractionActivity() { _touristAttractionDA = new TouristAttractionDA(); }
         public IEnumerable<dynamic> GetTouristAttractions(ICollection<int> IDs)
         {
-            touristAttractions = new List<dynamic>();
-            touristAttractions = _oTouristAttractionDA.GetTouristAttractions(IDs);
-            return touristAttractions;
+            _touristAttractions = new List<dynamic>();
+            _touristAttractions = _touristAttractionDA.GetTouristAttractions(IDs);
+            return _touristAttractions;
         }
         public IEnumerable<dynamic> GetTouristAttractions()
         {
-            touristAttractions = new List<dynamic>();
-            touristAttractions = _oTouristAttractionDA.GetTouristAttractions();
-            return touristAttractions;
+            _touristAttractions = new List<dynamic>();
+            _touristAttractions = _touristAttractionDA.GetTouristAttractions();
+            return _touristAttractions;
         }
         public IEnumerable<dynamic> GetTouristAttractions(int locationID)
         {
-            touristAttractions = new List<dynamic>();
-            touristAttractions = _oTouristAttractionDA.GetTouristAttractions(locationID);
-            return touristAttractions;
+            _touristAttractions = new List<dynamic>();
+            _touristAttractions = _touristAttractionDA.GetTouristAttractions(locationID);
+            return _touristAttractions;
+        }
+
+        public IEnumerable<dynamic> GetSearchResults(string searchKeyword)
+        {
+            _touristAttractions = new List<dynamic>();
+            _touristAttractions = _touristAttractionDA.GetSearchResults(searchKeyword);
+            return _touristAttractions;
         }
     }
 }
