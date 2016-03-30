@@ -17,11 +17,16 @@ namespace Tourer.DataAccess
             touristAttractions = _oTouristAttractionDA.GetTouristAttractions(IDs);
             return touristAttractions;
         }
-
         public IEnumerable<dynamic> GetTouristAttractions()
         {
             touristAttractions = new List<dynamic>();
             touristAttractions = _oTouristAttractionDA.GetTouristAttractions();
+            return touristAttractions;
+        }
+        public IEnumerable<dynamic> GetTouristAttractions(int locationID)
+        {
+            touristAttractions = new List<dynamic>();
+            touristAttractions = _oTouristAttractionDA.GetTouristAttractions(locationID);
             return touristAttractions;
         }
     }

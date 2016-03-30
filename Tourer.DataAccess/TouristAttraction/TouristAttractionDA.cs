@@ -35,7 +35,21 @@ namespace Tourer.DataAccess
             touristAttractions = new List<dynamic>();
             try
             {
-                touristAttractions = _oTourerContext.TouristAttractions.Join(_oTourerContext.Locations, t => t.LocationID, l => l.LocationID, (t, l) => new { TouristAttraction = t, Location = l }).Take(CommonHelper.GenerateRandomNumber(2, 8)).ToList<dynamic>();
+                touristAttractions = _oTourerContext.TouristAttractions.Join(_oTourerContext.Locations, t => t.LocationID, l => l.LocationID, (t, l) => new { TouristAttraction = t, Location = l }).Join(_oTourerContext.TADetails, t => t.TouristAttraction.TouristAttractionID, d => d.TouristAttractionID, (t, d) => new { TouristAttraction = t, TADetail = d }).Take(CommonHelper.GenerateRandomNumber(2, 8)).ToList<dynamic>();
+                return touristAttractions;
+            }
+            catch (Exception)
+            {
+                touristAttractions = null;
+                return touristAttractions;
+            }
+        }
+        public ICollection<dynamic> GetTouristAttractions(int locationID)
+        {
+            touristAttractions = new List<dynamic>();
+            try
+            {
+                touristAttractions = _oTourerContext.TouristAttractions.Where(t=>t.LocationID == locationID).Join(_oTourerContext.Locations, t => t.LocationID, l => l.LocationID, (t, l) => new { TouristAttraction = t, Location = l }).Join(_oTourerContext.TADetails, t => t.TouristAttraction.TouristAttractionID, d => d.TouristAttractionID, (t, d) => new { TouristAttraction = t, TADetail = d }).Take(CommonHelper.GenerateRandomNumber(2, 8)).ToList<dynamic>();
                 return touristAttractions;
             }
             catch (Exception)
