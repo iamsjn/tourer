@@ -90,8 +90,11 @@
     <Compile Include="Model\Location\Location.cs" />
     <Compile Include="Model\TADetail\TADetail.cs" />
     <Compile Include="Model\TAttractionSeasonInfo\TAttractionSeasonInfo.cs" />
+    <Compile Include="Model\TAType\TAType.cs" />
     <Compile Include="Model\TourerInitializer.cs" />
     <Compile Include="Model\TouristAttraction\TouristAttraction.cs" />
+    <Compile Include="Model\UserAlbumPhoto\UserAlbumPhoto.cs" />
+    <Compile Include="Model\UserPhotoAlbum\UserPhotoAlbum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TourerContext.cs" />
     <Compile Include="Model\User\User.cs" />

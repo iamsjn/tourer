@@ -15,6 +15,12 @@ namespace Tourer.Main
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "SendPushNotification",
+                routeTemplate: "api/gcm/sendnotification",
+                defaults: new { controller = "GCM", action = "SendPushNotification" }
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "GetSeasonalTouristAttraction",
                 routeTemplate: "api/default/seasonal",
                 defaults: new { controller = "Default", action = "GetSeasonalTouristAttraction" }

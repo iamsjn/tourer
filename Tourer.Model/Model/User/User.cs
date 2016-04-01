@@ -16,7 +16,6 @@ namespace Tourer.Model
         [MaxLength(500)]
         [MinLength(2)]
         public string FirstName { get; set; }
-        [Required]
         [MaxLength(500)]
         [MinLength(2)]
         public string LastName { get; set; }
@@ -27,7 +26,7 @@ namespace Tourer.Model
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
 
-        public ICollection<GCM> GCMs { get; set; }
+        public IEnumerable<GCM> GCM { get; set; }
     }
 }
 

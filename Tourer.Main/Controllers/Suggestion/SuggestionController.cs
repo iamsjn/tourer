@@ -11,7 +11,7 @@ namespace Tourer.Main.Controllers
     public class SuggestionController : ApiController
     {
         IEnumerable<dynamic> _touristAttractions = null;
-        [HttpPost]
+        [HttpGet]
         public IEnumerable<dynamic> GetTouristAttractionSuggestion(int locationID)
         {
             TouristAttractionActivity oTouristAttractionActivity = new TouristAttractionActivity();

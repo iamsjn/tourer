@@ -10,11 +10,11 @@ namespace Tourer.DataAccess
     {
         TourerContext _oTourerContext = null;
         public UserDA() { _oTourerContext = new TourerContext(); }
-        public int Save(User oUser)
+        public User Save(User oUser)
         {
             _oTourerContext.Users.Add(oUser);
             _oTourerContext.SaveChanges();
-            return oUser.UserID;
+            return oUser;
         }
 
         public User IsExist(User oUser)

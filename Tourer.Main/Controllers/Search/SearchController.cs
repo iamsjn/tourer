@@ -15,7 +15,7 @@ namespace Tourer.Main.Controllers
         IEnumerable<dynamic> _locationalTouristAttractions = null;
         IEnumerable<dynamic> _categorizeTouristAttractions = null;
 
-        [HttpPost]
+        [HttpGet]
         public IEnumerable<dynamic> SearchTouristAttraction(string searchKeyword)
         {
             TouristAttractionActivity oTouristAttractionActivity = new TouristAttractionActivity();
@@ -27,6 +27,7 @@ namespace Tourer.Main.Controllers
 
             _touristAttractions = oTouristAttractionActivity.GetSearchResults(searchKeyword);
             _locationalTouristAttractions = oLocationActivity.GetSearchResults(searchKeyword);
+            _categorizeTouristAttractions = oLocationActivity.GetSearchResults(searchKeyword);
 
             _totalResults.Add(_touristAttractions.Concat(_locationalTouristAttractions).ToList());
 

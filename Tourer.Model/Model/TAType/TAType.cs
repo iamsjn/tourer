@@ -6,18 +6,12 @@ using System.Web;
 
 namespace Tourer.Model
 {
-    public class Location
+    public class TAType
     {
-        public int LocationID { get; set; }
-        public int? ParentID { get; set; }
-        [Required]
+        public int TATypeID { get; set; }
         public string Name { get; set; }
-        public string Longitude { get; set; }
-        public string Latitude { get; set; }
         [Required]
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
-
-        //public IEnumerable<TouristAttraction> TouristAttraction { get; set; }
     }
 }

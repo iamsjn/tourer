@@ -18,5 +18,8 @@ namespace Tourer.Model
         public DbSet<Location> Locations { get; set; }
         public DbSet<TAttractionSeasonInfo> TAttractionSeasonInfos { get; set; }
         public DbSet<TADetail> TADetails { get; set; }
+        public DbSet<TAType> TATypes { get; set; }
+        public DbSet<UserPhotoAlbum> UserPhotoAlbums { get; set; }
+        public DbSet<UserAlbumPhoto> UserAlbumPhotos { get; set; }
     }
 }

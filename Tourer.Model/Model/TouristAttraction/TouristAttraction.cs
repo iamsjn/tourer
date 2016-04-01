@@ -12,6 +12,8 @@ namespace Tourer.Model
         [Required]
         public int LocationID { get; set; }
         [Required]
+        public int TATypeID { get; set; }
+        [Required]
         public string Name { get; set; }
         public string PhotoOne { get; set; }
         public string PhotoTwo { get; set; }
