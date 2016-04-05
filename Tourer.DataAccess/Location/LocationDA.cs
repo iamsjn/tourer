@@ -31,11 +31,9 @@ namespace Tourer.DataAccess
             _touristAttractions = new List<dynamic>();
             try
             {
-                //_touristAttractions = _tourerContext.Locations.Where(l => l.Name.StartsWith(keyword) || l.Name.Contains(keyword) || l.Name.EndsWith(keyword)).Join(_tourerContext.TouristAttractions, l => l.LocationID, t => t.LocationID, (l, t) => new { Location = l, TouristAttraction = t }).Join(_tourerContext.TADetails, t => t.TouristAttraction.TouristAttractionID, d => d.TouristAttractionID, (t, d) => new { TAName = t.TouristAttraction.Name, TAID = t.TouristAttraction.TouristAttractionID, TALocation = t.Location.Name, TALocationID = t.Location.LocationID, TALocationLongitude = t.Location.Longitude, TALocationLattitude = t.Location.Latitude, TADetail = d.Detail }).ToList<dynamic>();
                 _touristAttractions = _tourerContext.Locations.Where(l => l.Name.StartsWith(keyword) || l.Name.Contains(keyword) || l.Name.EndsWith(keyword)).
                                         Join(_tourerContext.TouristAttractions, l => l.LocationID, t => t.LocationID, (l, t) => new { Location = l, TouristAttraction = t }).
-                                        Join(_tourerContext.TATypes, t => t.TouristAttraction.TATypeID, x => x.TATypeID, (t, l) => new { TAL = t, TAType = l }).
-                                        Join(_tourerContext.TADetails, t => t.TAL.TouristAttraction.TouristAttractionID, d => d.TouristAttractionID, (t, d) => new { TAName = t.TAL.TouristAttraction.Name, TAID = t.TAL.TouristAttraction.TouristAttractionID, TAType = t.TAType.Name, TATypeID = t.TAType.TATypeID, TALocation = t.TAL.Location.Name, TALocationID = t.TAL.Location.LocationID, TALocationLongitude = t.TAL.Location.Longitude, TALocationLattitude = t.TAL.Location.Latitude, TADetail = d.Detail }).
+                                        Join(_tourerContext.TATypes, t => t.TouristAttraction.TATypeID, x => x.TATypeID, (t, x) => new { TAName = t.TouristAttraction.Name, ID = t.TouristAttraction.TouristAttractionID, Photo = t.TouristAttraction.Photo, Type = x.Name, Location = t.Location.Name }).
                                         ToList<dynamic>();
                 return _touristAttractions;
             }

@@ -15,12 +15,8 @@ namespace Tourer.Model
         public int TATypeID { get; set; }
         [Required]
         public string Name { get; set; }
-        public string PhotoOne { get; set; }
-        public string PhotoTwo { get; set; }
-        public string PhotoThree { get; set; }
-        public string PhotoFour { get; set; }
-        public string PhotoFive { get; set; }
-        public string PhotoSix { get; set; }
+        public string Photo { get; set; }
+        public string BannerPhoto { get; set; }
         [Required]
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }

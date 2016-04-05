@@ -98,6 +98,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TADetail\TADetailActivity.cs" />
     <Compile Include="TADetail\TADetailDA.cs" />
+    <Compile Include="TAPhoto\TAPhotoActivity.cs" />
+    <Compile Include="TAPhoto\TAPhotoDA.cs" />
+    <Compile Include="TAReview\TAReviewActivity.cs" />
+    <Compile Include="TAReview\TAReviewDA.cs" />
     <Compile Include="TAttractionSeasonInfo\TAttractionSeasonInfoActivity.cs" />
     <Compile Include="TAttractionSeasonInfo\TAttractionSeasonInfoDA.cs" />
     <Compile Include="TAType\TATypeActivity.cs" />

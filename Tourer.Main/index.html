@@ -9,17 +9,17 @@
     <div>
         <h2>Search by ID</h2>
         <input type="text" id="prodId" size="5" />
-        <input type="button" value="Search" onclick="find();" />
+        <input type="button" value="Search" onclick="detail();" />
         <p id="product" />
 
-        <form action="api/default/signup" method="post">
+        <!--<form action="api/default/signup" method="post">
             <input type="text" name="gcm[gcmno]" value="srgdgdfg"   />
             <input type="text" name="user[email]" value="dff@ff.com"  />
             <input type="text" name="user[firstname]" value="dfg"   />
             <input type="text" name="user[lastname]" value="dfdfg"  />
             <input type="text" name="user[password]" value="fdfdf"  />
             <button type="submit" value="button" />
-        </form>
+        </form>-->
 
     </div>
 
@@ -42,13 +42,13 @@
             }
             var ogcm =
             {
-                "gcmno": "ertytryty56y655hgnhgngh"
+                "gcmno": "we232dsddf445fgertytryty56y655hgnhgngh"
             }
 
 
             var info = "hdfhdhfhdgfhgdhfgdhgfdhfgdhfdfdhgg";
             var id = 1;
-            $.post('api/default/signup', { "gcm": { "gcmno": "asdasdasdasdadasdad" }, "user": { "email": "mdzievan5@gmail.com", "firstname": "zahidul", "lastname": "islam", "password": "12312412" } })
+            $.post('api/default/signup', { "gcm": { "gcmno": "we232dsddf445fgertytryty56y655hgnhgngh" }, "user": { "email": "sujon@celimited.com", "firstname": "sujon", "lastname": "ahmed", "password": "12345" } })
                 .done(function (data) {
                     console.log(JSON.stringify(data));
                 })
@@ -61,6 +61,48 @@
             $.post('api/gcm/sendnotification')
                 .done(function (data) {
                     console.log(data);
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    console.log(err);
+                });
+        }
+
+        function signin() {
+            $.post('api/default/signin', { "gcm": { "gcmno": "we232dsddf445fgertytryty56y655hgnhgngh" }, "user": { "email": "sujon@celimited.com", "password": "12345" } })
+                .done(function (data) {
+                    console.log(JSON.stringify(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    console.log(err);
+                });
+        }
+
+        function detail() {
+            var id = 17;
+            $.post('api/detail/details/' + id)
+                .done(function (data) {
+                    console.log(JSON.stringify(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    console.log(err);
+                });
+        }
+
+        function seasonal() {
+            $.get('api/default/seasonal')
+                .done(function (data) {
+                    console.log(JSON.stringify(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    console.log(err);
+                });
+        }
+
+        function search() {
+            var keyword = 'man';
+            $.post('api/search/searchta/' + keyword)
+                .done(function (data) {
+                    console.log(JSON.stringify(data));
                 })
                 .fail(function (jqXHR, textStatus, err) {
                     console.log(err);

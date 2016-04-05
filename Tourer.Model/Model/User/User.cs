@@ -22,6 +22,7 @@ namespace Tourer.Model
         [Required]
         [MinLength(5)]
         public string Password { get; set; }
+        public string Photo { get; set; }
         [Required]
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }

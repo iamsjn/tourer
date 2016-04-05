@@ -21,5 +21,7 @@ namespace Tourer.Model
         public DbSet<TAType> TATypes { get; set; }
         public DbSet<UserPhotoAlbum> UserPhotoAlbums { get; set; }
         public DbSet<UserAlbumPhoto> UserAlbumPhotos { get; set; }
+        public DbSet<TAReview> TAReviews { get; set; }
+        public DbSet<TAPhoto> TAPhotos { get; set; }
     }
 }

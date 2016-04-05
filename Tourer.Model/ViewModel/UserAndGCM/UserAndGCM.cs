@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tourer.Model
 {
-    public class PostUserGCM
+    public class UserAndGCM
     {
         #region Public Properties
         public User User { get; set; }

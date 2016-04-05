@@ -196,7 +196,7 @@
     <Compile Include="Controllers\Default\DefaultController.cs" />
     <Compile Include="Controllers\GCM\GCMController.cs" />
     <Compile Include="Controllers\Search\SearchController.cs" />
-    <Compile Include="Controllers\Suggestion\SuggestionController.cs" />
+    <Compile Include="Controllers\Detail\DetailController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -243,6 +243,46 @@
     <Compile Include="Migrations\201604010848581_Add-Tables-TAType-UserPhotoAlbum-UserAlbumPhoto.cs" />
     <Compile Include="Migrations\201604010848581_Add-Tables-TAType-UserPhotoAlbum-UserAlbumPhoto.Designer.cs">
       <DependentUpon>201604010848581_Add-Tables-TAType-UserPhotoAlbum-UserAlbumPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604020721201_Add-Table-TAReview.cs" />
+    <Compile Include="Migrations\201604020721201_Add-Table-TAReview.Designer.cs">
+      <DependentUpon>201604020721201_Add-Table-TAReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021341006_Update-TAReview.cs" />
+    <Compile Include="Migrations\201604021341006_Update-TAReview.Designer.cs">
+      <DependentUpon>201604021341006_Update-TAReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021347033_Update-TAReview-second.cs" />
+    <Compile Include="Migrations\201604021347033_Update-TAReview-second.Designer.cs">
+      <DependentUpon>201604021347033_Update-TAReview-second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021357016_Update-Model.cs" />
+    <Compile Include="Migrations\201604021357016_Update-Model.Designer.cs">
+      <DependentUpon>201604021357016_Update-Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021400096_Update-Model-Second.cs" />
+    <Compile Include="Migrations\201604021400096_Update-Model-Second.Designer.cs">
+      <DependentUpon>201604021400096_Update-Model-Second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021402538_Add-Table-TAReview-Again.cs" />
+    <Compile Include="Migrations\201604021402538_Add-Table-TAReview-Again.Designer.cs">
+      <DependentUpon>201604021402538_Add-Table-TAReview-Again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021412511_Update-Model-Third.cs" />
+    <Compile Include="Migrations\201604021412511_Update-Model-Third.Designer.cs">
+      <DependentUpon>201604021412511_Update-Model-Third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604021422367_Add-Table-TAReview-Again-Twice.cs" />
+    <Compile Include="Migrations\201604021422367_Add-Table-TAReview-Again-Twice.Designer.cs">
+      <DependentUpon>201604021422367_Add-Table-TAReview-Again-Twice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604031945176_Add-Table-TAPhoto.cs" />
+    <Compile Include="Migrations\201604031945176_Add-Table-TAPhoto.Designer.cs">
+      <DependentUpon>201604031945176_Add-Table-TAPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604050236082_Modify-User-Table.cs" />
+    <Compile Include="Migrations\201604050236082_Modify-User-Table.Designer.cs">
+      <DependentUpon>201604050236082_Modify-User-Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -350,6 +390,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604010848581_Add-Tables-TAType-UserPhotoAlbum-UserAlbumPhoto.resx">
       <DependentUpon>201604010848581_Add-Tables-TAType-UserPhotoAlbum-UserAlbumPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604020721201_Add-Table-TAReview.resx">
+      <DependentUpon>201604020721201_Add-Table-TAReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021341006_Update-TAReview.resx">
+      <DependentUpon>201604021341006_Update-TAReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021347033_Update-TAReview-second.resx">
+      <DependentUpon>201604021347033_Update-TAReview-second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021357016_Update-Model.resx">
+      <DependentUpon>201604021357016_Update-Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021400096_Update-Model-Second.resx">
+      <DependentUpon>201604021400096_Update-Model-Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021402538_Add-Table-TAReview-Again.resx">
+      <DependentUpon>201604021402538_Add-Table-TAReview-Again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021412511_Update-Model-Third.resx">
+      <DependentUpon>201604021412511_Update-Model-Third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604021422367_Add-Table-TAReview-Again-Twice.resx">
+      <DependentUpon>201604021422367_Add-Table-TAReview-Again-Twice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604031945176_Add-Table-TAPhoto.resx">
+      <DependentUpon>201604031945176_Add-Table-TAPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604050236082_Modify-User-Table.resx">
+      <DependentUpon>201604050236082_Modify-User-Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -33,9 +33,15 @@ namespace Tourer.Main
             );
 
             config.Routes.MapHttpRoute(
-                name: "GetTouristAttractionSuggestion",
-                routeTemplate: "api/suggestion/suggestions/{locationID}",
-                defaults: new { controller = "Suggestion", action = "GetTouristAttractionSuggestion", locationID = RouteParameter.Optional }
+                name: "GetReviewedTAttraction",
+                routeTemplate: "api/default/reviewedta/{userID}",
+                defaults: new { controller = "Default", action = "GetReviewedTAttraction", userID = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "GetDetail",
+                routeTemplate: "api/detail/details/{touristAttractionID}",
+                defaults: new { controller = "Detail", action = "GetDetail", touristAttractionID = RouteParameter.Optional }
             );
 
             config.Routes.MapHttpRoute(

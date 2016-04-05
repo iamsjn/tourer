@@ -5,22 +5,22 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Tourer.DataAccess;
+using Newtonsoft.Json.Linq;
 
 namespace Tourer.Main.Controllers
 {
     public class SearchController : ApiController
     {
-        ICollection<dynamic> _totalResults = null;
         IEnumerable<dynamic> _touristAttractions = null;
         IEnumerable<dynamic> _locationalTouristAttractions = null;
         IEnumerable<dynamic> _categorizeTouristAttractions = null;
+        JObject _data = null;
 
-        [HttpGet]
-        public IEnumerable<dynamic> SearchTouristAttraction(string searchKeyword)
+        [HttpPost]
+        public IHttpActionResult SearchTouristAttraction(string searchKeyword)
         {
             TouristAttractionActivity oTouristAttractionActivity = new TouristAttractionActivity();
             LocationActivity oLocationActivity = new LocationActivity();
-            _totalResults = new List<dynamic>();
             _touristAttractions = new List<dynamic>();
             _locationalTouristAttractions = new List<dynamic>();
             _categorizeTouristAttractions = new List<dynamic>();
@@ -29,9 +29,12 @@ namespace Tourer.Main.Controllers
             _locationalTouristAttractions = oLocationActivity.GetSearchResults(searchKeyword);
             _categorizeTouristAttractions = oLocationActivity.GetSearchResults(searchKeyword);
 
-            _totalResults.Add(_touristAttractions.Concat(_locationalTouristAttractions).ToList());
+            _locationalTouristAttractions = _locationalTouristAttractions.Concat(_categorizeTouristAttractions).ToList<dynamic>();
+            _touristAttractions = _touristAttractions.Concat(_locationalTouristAttractions).ToList<dynamic>();
 
-            return _touristAttractions;
+            _data = CommonHelper.GenerateSearchTAJObject(_touristAttractions);
+
+            return Ok(_data);
         }
     }
 }
