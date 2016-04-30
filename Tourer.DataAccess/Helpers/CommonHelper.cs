@@ -215,6 +215,22 @@ namespace Tourer.DataAccess
         }
         #endregion
 
+        #region GenerateTAReviewJObject
+        public static JObject GenerateTAReviewJObject(TAReview oTAReview)
+        {
+            if (oTAReview != null)
+            {
+                JObject jObject = JObject.FromObject(new { user = new { status = "valid", userid = oTAReview.UserID, reviewid = oTAReview.TAReviewID, rating = oTAReview.Rating, review = oTAReview.Review } });
+                return jObject;
+            }
+            else
+            {
+                JObject jObject = CommonHelper.GenerateCommonJObject("invalid", "No user found!");
+                return jObject;
+            }
+        }
+        #endregion
+
         #region GenerateCommonJObject
         public static JObject GenerateCommonJObject(string status, string message)
         {

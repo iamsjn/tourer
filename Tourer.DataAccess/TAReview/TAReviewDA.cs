@@ -13,6 +13,7 @@ namespace Tourer.DataAccess
         ICollection<dynamic> _reviews = null;
         ICollection<dynamic> _touristAttractions = null;
         dynamic _review = null;
+
         ICollection<int> _IDs = null;
         #endregion
 
@@ -117,6 +118,16 @@ namespace Tourer.DataAccess
                 _touristAttractions = null;
                 return _touristAttractions;
             }
+        }
+        #endregion
+
+        #region Save : TAReview
+        public TAReview Save(TAReview oTAReview)
+        {
+            _tourerContext.TAReviews.Add(oTAReview);
+            _tourerContext.SaveChanges();
+            oTAReview = _tourerContext.TAReviews.Where(r => r.TAReviewID == oTAReview.TAReviewID).First();
+            return oTAReview;
         }
         #endregion
 

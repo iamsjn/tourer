@@ -70,6 +70,14 @@ namespace Tourer.DataAccess
         }
         #endregion
 
+        #region Save : TAReview
+        public TAReview Save(TAReview oTAReview)
+        {
+            oTAReview = _tAReviewDA.Save(oTAReview);
+            return oTAReview;
+        }
+        #endregion
+
         #endregion
     }
 }
